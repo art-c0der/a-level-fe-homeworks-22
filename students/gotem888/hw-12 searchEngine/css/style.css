@@ -200,11 +200,6 @@ body {
     padding: 20px 15px;
     background: #191c29;
     border: 0 #eee solid;
-    /* box-shadow: 0px 0px 8px 0px #fff; */
-  }
-  
-  .loading {
-    text-align: center;
   }
   
   .content {
@@ -269,11 +264,11 @@ body {
   .card:hover .content{
     top:50px;
   }
-.posCalibrate{
+  .posCalibrate{
     position: fixed;
     top:20%;
 }
-.wrapper__filters{
+  .wrapper__filters{
     position: relative;
     width: 300px;
     height: auto;

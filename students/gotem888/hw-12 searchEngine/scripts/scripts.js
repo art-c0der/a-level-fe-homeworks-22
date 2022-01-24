@@ -351,13 +351,6 @@ const PLUGINS =[
         }
     }
 ];
-// document.addEventListener('DOMContentLoaded', () => {
-//     setTimeout(() => {
-//       document.getElementsByTagName('input').hidden = 'true';
-  
-//     //   generateContent(PLUGINS);
-//     }, 1000);
-//   });
 
 const createCardContent = (object) => {
     const {headline, image} = object;
@@ -389,7 +382,6 @@ const createCardContent = (object) => {
   const filterData = (data, filter) => {
     const {vstname, group} = filter;
     return data.filter((item) => {
-      // true || false
       let result = true;
   
       if (vstname) {
@@ -408,9 +400,6 @@ const createCardContent = (object) => {
     });
   };
 
-
-
-
 generateContent(PLUGINS);
 
   document.forms.filtersForm.addEventListener('submit', (e) => {
@@ -425,14 +414,4 @@ generateContent(PLUGINS);
 
 
   document.getElementById('rstButton').addEventListener("click", ()=> {generateContent(PLUGINS)});
-
-  /**
-   * 1. card create function = DONE
-   * 2. generate content
-   * 3. get data form filters form:
-   *  - get link to the form
-   *  - add listener
-   *  - get values from inputs
-   * 4. handle form submit => generate content
-   */
   
