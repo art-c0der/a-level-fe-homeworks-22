@@ -1,1 +1,1 @@
-https://ann25tmfv.github.io/apple-shop-1/
+https://ann25tmfv.github.io/apple/
