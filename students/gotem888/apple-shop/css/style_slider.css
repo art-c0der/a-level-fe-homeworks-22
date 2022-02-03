@@ -103,6 +103,11 @@ p.watch {
   left: 5%;
   top: 35%;
 }
+p.podsMax {
+  color: #000;
+  top: 0;
+  left: 30%;
+}
 
 a.app_tv {
   bottom: 48%;
@@ -113,6 +118,9 @@ a.macbook {
 }
 a.app_watch {
   left: 22%;
+}
+a.max {
+  bottom: 5%;
 }
 a.button:hover {
   background: #0e49b5;
