@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="./basic/image_1_MacOutlet.png" alt="logo">
+        </div>
+        <div class="slider_banner">
+            <img src="./Basic/ipad_air_banner.jpg">
+        </div>
+        <div class="search__field">
+            <input class="search" type="search" inputmode="search" placeholder="Enter device name">
+            <img src="./icons/filter.svg" class="icon_filter" alt="icon_filter">
+            <img src="./Basic/Sort.svg">
+        </div>
+    </div>
+    <div class="main">
+        <div class="filtering">
+            <button class="accordion">Price</button>
+            <div class="panel">
+                <div class="form__item">
+                    <label for="name">From</label> 
+                    <input type="text" name="name" id="name" placeholder="From...">
+                </div>
+                <div class="form__item">
+                    <label for="name">To</label> 
+                    <input type="text" name="name" id="name" placeholder="To...">
+                </div>
+            </div>
+
+            <button class="accordion">Color</button>
+            <div class="panel">
+                <input type="checkbox"/>
+                    <label>Red   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Green   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Black   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>White   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Blue   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Grey   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Gold   
+                    <span></span>
+                </label>
+                <input type="checkbox"/>
+                    <label>Yellow   
+                    <span></span>
+                </label>
+            </div>
+
+            <button class="accordion">Memory</button>
+            <div class="panel">
+                <input type="checkbox"/>
+                    <label>32 Gb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>64 Gb  
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>128 Gb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>256 Gb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>512 Gb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>1 Tb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>2 Tb   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>4 Tb   
+                        <span></span>
+                    </label>        
+            </div>
+
+            <button class="accordion">OS</button>
+            <div class="panel">
+                <input type="checkbox"/>
+                    <label>iOS   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>Mac OS   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>tvOS   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>watch OS   
+                        <span></span>
+                    </label>
+            </div>
+
+            <button class="accordion">Display</button>
+            <div class="panel">
+                <input type="checkbox"/>
+                    <label>2 - 5 inch   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>5 - 7 inch   
+                        <span></span>
+                    </label>
+                <input type="checkbox"/>
+                    <label>7 - 12 inch   
+                        <span></span>
+                    </label>  
+                <input type="checkbox"/>
+                    <label>12 - 16 inch   
+                        <span></span>
+                    </label>  
+                <input type="checkbox"/>
+                    <label>+16 inch   
+                        <span></span>
+                    </label>
+            </div>
+        </div>
+        <div id="content" class="content"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
