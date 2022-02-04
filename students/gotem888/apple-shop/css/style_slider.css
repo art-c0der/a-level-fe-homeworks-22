@@ -12,6 +12,8 @@
 }
 .slider__item {
   display: inline-block;
+  height: 512px;
+  width: 1024px;
   flex: 0 0 100%;
   max-width: 100%;
   position: relative;

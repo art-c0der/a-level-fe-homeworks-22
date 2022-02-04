@@ -15,22 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <script>
-      function viewAside() {
-        let searchMenu = document.getElementById("aside__menu");
-        if (searchMenu.style.display === "block")
-          searchMenu.style.display = "none";
-        else searchMenu.style.display = "block";
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        var slider = new SimpleAdaptiveSlider(".slider", {
-          loop: true,
-          autoplay: true,
-          interval: 10000,
-          swipe: true,
-        });
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -41,7 +25,7 @@
       >
         <div class="logoCart">
           <a href="#" class="logo">
-            <img src="https://i.ibb.co/1LXRJJD/macoutlet.png" alt="logo" />
+            <img src="./img/macoutlet.png" alt="logo" />
           </a>
           <a href="#" class="cart">
             <svg
@@ -71,17 +55,14 @@
             </svg>
           </a>
         </div>
-        <!-- <div class="banner"> -->
         <div class="slider">
           <div class="slider__wrapper">
             <div class="slider__items">
               <div
                 class="slider__item"
                 style="
-                  height: 512px;
-                  width: 1024px;
-                  background: url(https://i.ibb.co/Vv56g5v/ipad-air-banner.png)
-                    no-repeat bottom center;
+                  background: url(./img/ipad_air_banner.png) no-repeat bottom
+                    center;
                 "
               >
                 <p class="banner">IPad Air</p>
@@ -89,83 +70,49 @@
               </div>
               <div
                 class="slider__item"
-                style="
-                  height: 512px;
-                  width: 1024px;
-                  background: url(https://i.ibb.co/ngCZgVM/airpods-pro-banner-1.png);
-                "
+                style="background: url(./img/airpods_pro_banner-1.png)"
               >
                 <p class="banner pods">AirPods Pro</p>
                 <a href="#" class="button">Add to cart</a>
               </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/WyS2nyD/apple-tv-banner-1.png);
-                  "
-                >
-                  <p class="banner tv">Apple TV</p>
-                  <a href="#" class="button app_tv">Add to cart</a>
-                </div>
+              <div
+                class="slider__item"
+                style="background: url(./img/apple_tv_banner1.png)"
+              >
+                <p class="banner tv">Apple TV</p>
+                <a href="#" class="button app_tv">Add to cart</a>
               </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/4KDTQq8/airpods-max-2.png);
-                  "
-                >
-                  <p class="banner podsMax">AirPods Max</p>
-                  <a href="#" class="button max">Add to cart</a>
-                </div>
+              <div
+                class="slider__item"
+                style="background: url(./img/airpods-max-2.png)"
+              >
+                <p class="banner podsMax">AirPods Max</p>
+                <a href="#" class="button max">Add to cart</a>
               </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/KWFKt5W/appleairpodsmax.jpg);
-                  "
-                >
-                  <p class="banner podsMax">AirPods Max</p>
-                  <a href="#" class="button max">Add to cart</a>
-                </div>
+              <div
+                class="slider__item"
+                style="background: url(./img/appleairpodsmax.jpg)"
+              >
+                <p class="banner podsMax">AirPods Max</p>
+                <a href="#" class="button max">Add to cart</a>
               </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/N3RRpZV/iphone-12-banner-1.png);
-                  "
-                ></div>
+              <div
+                class="slider__item"
+                style="background: url(./img/iphone_12_banner1.png)"
+              ></div>
+              <div
+                class="slider__item"
+                style="background: url(./img/mac_book_banner1.jpg)"
+              >
+                <p class="banner mac">MacBook Pro 16</p>
+                <a href="#" class="button macbook">Add to cart</a>
               </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/N3D1D3v/mac-book-banner-1.jpg);
-                  "
-                >
-                  <p class="banner mac">MacBook Pro 16</p>
-                  <a href="#" class="button macbook">Add to cart</a>
-                </div>
-              </div>
-              <div class="slider__item">
-                <div
-                  style="
-                    height: 512px;
-                    width: 1024px;
-                    background: url(https://i.ibb.co/PcfLfN9/watch-banner-1.png);
-                  "
-                >
-                  <p class="banner watch">Apple Watch 4</p>
-                  <a href="#" class="button app_watch">Add to cart</a>
-                </div>
+              <div
+                class="slider__item"
+                style="background: url(./img/watch_banner1.png)"
+              >
+                <p class="banner watch">Apple Watch 4</p>
+                <a href="#" class="button app_watch">Add to cart</a>
               </div>
             </div>
           </div>
@@ -174,34 +121,33 @@
             href="#"
             role="button"
             data-slide="prev"
-            ><img url="https://i.ibb.co/hm7MpJK/leftarrow.png"
+            ><img url="./img/leftarrow.png"
           /></a>
           <a
             class="slider__control slider__control_next"
             href="#"
             role="button"
             data-slide="next"
-            ><img url="https://i.ibb.co/q9qGtrH/rightarrow.png"
+            ><img url="./img/rightarrow.png"
           /></a>
         </div>
       </div>
-      <!-- </div> -->
     </header>
     <main class="product__wrapper">
-      <aside class="aside" id="aside__menu">
+      <aside class="aside" id="aside__menu" class="aside__menu">
         <button type="button" class="accordion cost">
           Price
-          <img src="https://i.ibb.co/GtVrywf/arrowright.png" class="arrow" />
+          <img src="./img/arrowright.png" class="arrow" />
         </button>
         <div class="panel cost">
           <label for="from">From</label>
-          <input type="numbers" id="from" autocomplete="off" />
+          <input type="numbers" id="from" class="from" autocomplete="off" />
           <label for="to">To</label>
-          <input type="numbers" id="to" autocomplete="off" />
+          <input type="numbers" id="to" class="to" autocomplete="off" />
         </div>
         <button type="button" class="accordion">
           Color
-          <img src="https://i.ibb.co/GtVrywf/arrowright.png" class="arrow" />
+          <img src="./img/arrowright.png" class="arrow" />
         </button>
         <div class="panel">
           <label><input type="checkbox" />Red</label>
@@ -215,7 +161,7 @@
         </div>
         <button type="button" class="accordion">
           Memory
-          <img src="https://i.ibb.co/GtVrywf/arrowright.png" class="arrow" />
+          <img src="./img/arrowright.png" class="arrow" />
         </button>
         <div class="panel">
           <label><input type="checkbox" />32 Gb</label>
@@ -229,7 +175,7 @@
         </div>
         <button type="button" class="accordion">
           OS
-          <img src="https://i.ibb.co/GtVrywf/arrowright.png" class="arrow" />
+          <img src="./img/arrowright.png" class="arrow" />
         </button>
         <div class="panel">
           <label><input type="checkbox" />IOS</label>
@@ -239,7 +185,7 @@
         </div>
         <button type="button" class="accordion disp">
           Display
-          <img src="https://i.ibb.co/GtVrywf/arrowright.png" class="arrow" />
+          <img src="./img/arrowright.png" class="arrow" />
         </button>
         <div class="panel disp">
           <label><input type="checkbox" />2 - 5 inch</label>
@@ -253,14 +199,9 @@
 
       <form>
         <div class="search-wrapper">
-          <label
-            for="search-box"
-            class="search-icon"
-            type="button"
-            value="click"
-            onmousedown="viewAside()"
-          >
+          <label for="search-box" class="search-icon" type="button">
             <svg
+              id="search-icon"
               width="47"
               height="51"
               viewBox="0 0 47 51"
@@ -291,12 +232,13 @@
           </label>
           <input
             id="search-box"
+            class="search-box"
             type="search"
             autocomplete="off"
             placeholder="Enter device name..."
           />
-          <input type="checkbox" id="filter-menu" />
-          <label id="filter-button" for="filter-menu">
+          <input type="checkbox" id="filter-menu" class="filter-menu" />
+          <label id="filter-button" class="filter-button" for="filter-menu">
             <svg
               width="41"
               height="40"
@@ -355,8 +297,8 @@
               <button class="results" type="submit">Filter results</button>
             </div>
           </label>
-          <input type="checkbox" id="sort-menu" />
-          <label id="sort-button" for="sort-menu">
+          <input type="checkbox" id="sort-menu" class="sort-menu" />
+          <label id="sort-button" class="sort-button" for="sort-menu">
             <svg
               width="41"
               height="40"
@@ -396,16 +338,13 @@
             <div class="order-menu">
               <p class="mainame">Order</p>
               <div class="sort">
-                <div id="def_sort">Default</div>
-                <div id="ascend">
-                  <img src="https://i.ibb.co/PWjNvvB/Ascending.png" alt="asc" />
+                <div id="def_sort" class="def_sort">Default</div>
+                <div id="ascend" class="ascend">
+                  <img src="./img/Ascending.png" alt="asc" />
                   <p>Ascending</p>
                 </div>
-                <div id="descend">
-                  <img
-                    src="https://i.ibb.co/Gp6cShZ/Descending.png"
-                    alt="desc"
-                  />
+                <div id="descend" class="descend">
+                  <img src="./img/Descending.png" alt="desc" />
                   <p>Descending</p>
                 </div>
               </div>
@@ -413,12 +352,10 @@
           </label>
         </div>
       </form>
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <!-- Modal content -->
+      <div id="myModal" class="modal close">
         <div id="modal" class="modal-content"></div>
       </div>
     </main>
-    <script src="scripts/scripts.js"></script>
+    <script type="module" src="./scripts/scripts.js"></script>
   </body>
 </html>
