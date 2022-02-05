@@ -59,7 +59,6 @@ body {
 }
 
 .form:hover {
-  /* transition: 2s; */
   background-color: #202436;
   color: rgb(88 199 250 / 100%);
   box-shadow: 0 0 3px 1px #2e6e80, 0 0 5px 2px #5ddcff;
@@ -217,7 +216,6 @@ div.radio {
   padding: 20px 15px;
   background: #191c29;
   border: 0 #eee solid;
-  /* box-shadow: 0px 0px 8px 0px #fff; */
 }
 
 .loading {
