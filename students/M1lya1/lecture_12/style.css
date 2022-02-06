@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+    padding: 40px 20px;
+}
+.wrapper__filters {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    padding: 20px 15px;
+    background: white;
+    min-height: 500px;
+}
+.wrapper__filters .form__item {
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-bottom: 20px;
+}
+.wrapper__filters .form__item {
+    flex-direction: row;
+    width: 50%;
+    }
+.wrapper__content {
+    background: deepskyblue;
+    width: calc(100%-300px);
+    min-height: 500px;
+    padding: 20px 15px;
+}
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    padding: 30px 15px;
+    border: 1px #eee solid;
+    background-color: rgb(121, 122, 82);
+    border-radius: 15px;
+}
+.form .form__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.form .form__item.form__item--radio {
+    flex-direction: row;
+    width: auto;
+}
+.form button.form__item {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(7, 27, 32);
+    border-radius: 3px;
+    color: white;
+}
+.loading {
+    text-align: center;
+}
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px;
+}
+.card {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card__img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+.card__title {
+    position: absolute;
+    height: 30px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: blueviolet;
+    color: chartreuse;
+    margin: 0;
+    padding: 0;
+}
+.card:hover,
+.card:focus {
+    transform: skewX(5deg) skewY(10deg) rotate(360deg);
+    transition: 1.5s;
+}
