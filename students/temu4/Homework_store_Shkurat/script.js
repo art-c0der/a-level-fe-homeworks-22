@@ -1338,10 +1338,10 @@ const filterData = (data, filter) => {
     });
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("loading").hidden = "true";
-    generateContent(items);
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.getElementById("loading").hidden = "true";
+//     generateContent(items);
+// });
 
 document.forms.filtersForm.addEventListener("submit", (e) => {
     e.preventDefault();
