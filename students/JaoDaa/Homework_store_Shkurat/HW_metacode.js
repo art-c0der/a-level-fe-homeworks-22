@@ -19,15 +19,21 @@ document.getElementById("buttonCountMinus").onclick = function () {
   }
 };
 
+В разметке 1 див и сама кнопка
+
 // 1. Create Array USERS
-// 2. Create form for collecting the Data 
+// 2. Create form for collecting the Data - разметка страницы 
+// Создаем переменную с динамическими переменными.
 // 3. Create function for presenting all USERS 
 // 4. Create function for filtering USERS by name
 // 5. Showing filtered name in a created form 
 
+1. 
 
-1. HTML we create form
-2. we create button Filters we give it a class
-3. We create div where we collect the filtered data 
-4. JS we address to class by getElementByClassName 
+// 1. HTML we create form
+// 2. we create button Filters we give it a class
+// 3. We create div where we collect the filtered data 
+// 4. JS we address to class by getElementByClassName 
+
+
 
