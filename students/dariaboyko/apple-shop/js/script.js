@@ -1284,7 +1284,7 @@ const createCardContent = (object) => {
     <div class="productInfo stats">
     <img class="likeReview" src='./img/icons/like.svg'>
     <div class="cardBottom">
-    <p>${orderInfo.reviews}% Positive reviews</p>
+    <p><span class="boldNumbers">${orderInfo.reviews}% </span> Positive reviews</p>
     <p>Above avarage</p>
     </div>
     </div>
@@ -1330,17 +1330,22 @@ generateContent(items);
 
 const filterData = (data, filter) => {
   const {device} = filter;
-  return data.filter((item) => {
-    let result = true;
+  const filteredData1 = data.filter((item) => {
+    let result = false;
 
     if (device) {
-      if (item.name.toLowerCase().indexOf(device.toLowerCase()) === -1) {
-        result = false;
+      if (item.name.toLowerCase().includes(device.toLowerCase())) {
+        result = true;
       }
     }
-
     return result;
   });
+  if(device.length===0){
+    return items;
+  }
+  else if(filteredData1!==0){
+    return filteredData1;
+  }
 };
 
 document.forms.searchBar.addEventListener('submit', (e) => {
