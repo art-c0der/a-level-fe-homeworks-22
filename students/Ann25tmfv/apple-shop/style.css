@@ -1,0 +1,170 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    width: 1024px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+}
+
+.basket {
+    background: url(./img/icons/cart.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border: 0;
+}
+
+.head-content {
+    width: 1024px;
+    height: 512px;
+    margin: auto;
+    margin-top: 58px;
+    background-image: url("./img/banners/mac_book_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form {
+    position: relative;
+}
+
+.filter {
+    position: absolute;
+    right: 400px;
+    top: 65px;
+    width: 50px;
+    height: 45px;
+    background: url(./img/icons/images.png);
+    background-repeat: no-repeat;  
+    background-size: 100%;
+    border: 0;
+}
+
+.settings {
+    position: absolute;
+    right: 300px;
+    top: 70px;
+    width: 50px;
+    height: 45px;
+    background: url(./img/icons/settings.svg);
+    background-repeat: no-repeat;  
+    background-size: 80%;
+    border: 0;
+}
+
+input[type="text"] {
+    height: 25px;
+    width: 1024px;
+    height: 60px;
+    margin: 0 250px;
+    margin-top: 50px;
+    padding: 5px 10px 5px 40px;
+    border:1px solid #999;
+    font-size:16px;
+    background-image: url(./img/icons/search.svg);   
+    background-repeat: no-repeat;   
+    background-position: 4px; 
+    background-size: 2%;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+
+.wrapper__content {
+    width: 1024px;
+    height: 1010px;
+    margin: auto;
+    margin-top: 41px;
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    gap: 20px;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    height: 480px;
+    width: 300px;
+    border: 2px #eee solid;
+    border-radius: 2px;
+    box-shadow: 0px 0px 7px 3px rgb(230, 230, 230);
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 41px;
+    margin: auto;
+}
+.btn {
+    background: url(./img/icons/like_empty.svg) no-repeat;
+    width: 10%;
+    height: 10%;
+    margin-top: 5px;
+    margin-left: 90%;
+    border: 0;
+}
+
+.image {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    margin: auto;
+}
+
+.title {
+    height: 20px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+}
+
+.inStock {
+    margin:auto;
+
+}
+
+.price {
+    margin: auto;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    background-color: rgba(58, 58, 240, 0.719);
+    color: white;
+}
+
+.reviews {
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    color: white;
+    padding: 0;
+    margin: 0;
+    transition: height 0.2s ease-in-out;
+}
