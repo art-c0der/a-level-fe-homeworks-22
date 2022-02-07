@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>HW - SearchEngine</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="wrapper__filters">
+        <div class="posCalibrate">
+          <form name="filtersForm" class="form" id="form">
+            <div class="form__item form__item--text">
+              <input type="text" required name="vstname" autocomplete="off" />
+              <label>
+                Enter VST name
+                <p id="here">here</p>
+              </label>
+            </div>
+
+            <div class="radio">
+              <div class="form__item form__item--radio">
+                <input
+                  type="radio"
+                  name="group"
+                  id="group_1"
+                  value="instruments"
+                />
+                <label for="group_1">VST Instruments</label>
+              </div>
+
+              <div class="form__item form__item--radio">
+                <input type="radio" name="group" id="group_2" value="effects" />
+                <label for="group_2">VST Effects</label>
+              </div>
+            </div>
+
+            <button type="submit" class="form__item">Search</button>
+            <button type="reset" class="form__item" id="resetButton">
+              Reset
+            </button>
+          </form>
+        </div>
+      </aside>
+      <main class="wrapper__content">
+        <div id="content" class="content">Loading...</div>
+      </main>
+    </div>
+    <script type="module" src="./scripts/scripts.js"></script>
+  </body>
+</html>
