@@ -197,9 +197,9 @@
       </aside>
       <div id="prodCard" class="prodCard"></div>
 
-      <form>
+      <form name="filtersForm" id="searchProduct">
         <div class="search-wrapper">
-          <label for="search-box" class="search-icon" type="button">
+          <label for="searchBox" class="search-icon" type="button">
             <svg
               id="search-icon"
               width="47"
@@ -231,7 +231,7 @@
             </svg>
           </label>
           <input
-            id="search-box"
+            id="searchBox"
             class="search-box"
             type="search"
             autocomplete="off"
@@ -277,12 +277,12 @@
               <div class="wins">
                 <select class="dropwin">
                   <option value="">All categories</option>
-                  <option value="1">Mac</option>
-                  <option value="2">iPad</option>
-                  <option value="3">Watch</option>
-                  <option value="4">iPhone</option>
-                  <option value="5">TV</option>
-                  <option value="6">AirPods</option>
+                  <option value="Mac">Mac</option>
+                  <option value="iPad">iPad</option>
+                  <option value="Watch">Watch</option>
+                  <option value="iPhone">iPhone</option>
+                  <option value="TV">TV</option>
+                  <option value="AirPods">AirPods</option>
                 </select>
 
                 <select class="dropwin any">
@@ -352,7 +352,7 @@
           </label>
         </div>
       </form>
-      <div id="myModal" class="modal close">
+      <div id="myModal" class="modal">
         <div id="modal" class="modal-content"></div>
       </div>
     </main>
