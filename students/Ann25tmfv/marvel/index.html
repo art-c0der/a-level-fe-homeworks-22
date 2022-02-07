@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Marvel</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="container__filters">
+        <form name="filtersForm" class="form">
+            <div class="form-group">
+            <label for="name">Search by name</label>
+            <input type="text" name="name" id="name" placeholder="search by name" />
+            </div>
+
+            <div class="form-group radio">
+            <input type="radio" name="group" id="group_1" value="galaxy" />
+            <label for="group_1">Guardians of Galaxy</label>
+            </div>
+
+            <div class="form-group radio">
+            <input type="radio" name="group" id="group_2" value="avengers" />
+            <label for="group_2">Avengers</label>
+            </div>
+
+            <button type="submit" class="form-group">Apply</button>
+            <button type="reset" class="form-group">Reset</button>
+        </form>
+        </aside>
+        <main class="container__content">
+        <div id="content" class="content"></div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body> 
+</html>
