@@ -210,15 +210,21 @@ input[type=search] {
 .active, .accordion:hover {
     background-color: #FFFFFF;
 }
+.open {
+    display: flex;
+    padding: 10px 30px;
+
+}
 .panel {
+    display: flex;
     background-color: #FFFFFF;
     overflow: hidden;
     width: 320px;
-    height: 150px;
-    display: none;
-    padding: 10px 30px;
+    max-height: 0px;
+   
     flex-direction: column;
     flex-wrap: wrap;
+    transition: max-height 0.4s ease-out;
 }
 input[type=checkbox] {
     width: 15px;
