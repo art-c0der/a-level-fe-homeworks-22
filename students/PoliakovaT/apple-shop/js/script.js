@@ -1,13 +1,22 @@
 import ITEMS from "./items.js";
 
 const createCardContent = (object) => {
-  const { imgUrl, name, price } = object;
+  const { name, imgUrl, price, orderInfo } = object;
 
   const card = `<div class="card">
-    <img class="card__img" src="${imgUrl}">
+    <img class="card__img" src="${imgUrl}" alt="${name}">
+    <img id="like_empty" src="./img/icons/like_empty1.png" />
     <p class="card__title">${name}</p>
-    <p class="card__title">Price: ${price} $</p> 
-    </div>`;
+    <p class="card__order"><img id="check" src="./img/icons/check2.svg" />${orderInfo.inStock} <span>left in stock</span></p>
+          <p class="card__price"><span>Price </span>${price}<span> $<span></p>
+          <button class="card__btn">Add to card</button>
+          <div class="card__review">
+          <img id="hart" src="./img/icons/hart.svg" />
+          <p class="review">${orderInfo.reviews}% <span>positive reviews<br>Above avarage</span></p>
+          <p>${orderInfo.inStock}<span><br>orders</span></p>
+          </div>
+      </div>
+  `;
   return card;
 };
 
@@ -17,10 +26,6 @@ const generateContent = (array) => {
   content.innerHTML = "";
 
   let data = "";
-
-  // const data = array.reduce((acc, element) => {
-  //     acc += createCardContent(element);
-  // }, '');
 
   array.forEach((element) => {
     data += createCardContent(element);
@@ -55,9 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.forms.filtersForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // e.target.name.value
-  // e.target.group.value
 
   const formData = new FormData(e.target);
   const formProps = Object.fromEntries(formData); // {group: STRING || UNDEFINED, name: STRING || UNDEFINED}

@@ -16,58 +16,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MacOutlet</title>
   </head>
+  
   <body class="wrapper">
+    <div class="popup">
+
+    </div>
     <header class="header">
       <div class="logo">
-        <img src="./img/logo.png" width="120" height="25" ; />
+        <img src="./img/logo.png" width="120" height="25"  />
       </div>
-      <div class="btn cart">
-        <div class="cart-img">
-          <img src="./img/icons/cart-1.svg" width="51" height="45" ; />
-        </div>
-
-        <div class="cart-count">
-          <img
-            class="cart-count"
-            src="./img/icons/cart-count.svg"
-            width="0"
-            height="0"
-            ;
-          />
-        </div>
-      </div>
+      <button class="btn cart">
+        <img src="./img/icons/cart-empty.svg" width="40" height="40"  />
+        <img
+          class="cart-count"
+          src="./img/icons/cart-count.svg"
+          width="25"
+          height="25"
+          
+        />
+      </button>
     </header>
     <img
       src="./img/banners/airpods_pro_banner.png"
       width="1024"
       height="auto"
-      ;
+      
     />
 
     <div class="main">
       <section class="search">
         <form name="filtersForm" class="search__form form">
+          <input
+            class="form__input"
+            type="search"
+            name="name"
+            id="name"
+            placeholder="Enter device name..."
+          />
           <img
             class="form__glass"
             src="./img/icons/search.svg"
             width="25"
             height="25"
           />
-          <input
-            class="form__input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter device name..."
-          />
           <div class="form__buttons">
-            <button type="submit" class="btn">
+            <button id="filter__btn" class="btn">
               <img src="./img/icons/filter2.svg" />
-              <!-- <svg width="41" height="39" viewBox="0 0 41 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1561 38.0384C31.288 38.0384 40.3122 29.5232 40.3122 19.0192C40.3122 8.51518 31.288 0 20.1561 0C9.02419 0 0 8.51518 0 19.0192C0 29.5232 9.02419 38.0384 20.1561 38.0384ZM21.7519 26.3891H17.5527V24.408H21.7519V26.3891ZM10.2041 16.4833V14.5022H29.1004V16.4833H10.2041ZM25.951 21.4362H13.3535V19.4551H25.951V21.4362Z" fill="#0E49B5"/>
-                                </svg> -->
             </button>
-            <button class="btn"><img src="./img/icons/sort.svg" /></button>
+            <button id="setting__btn" class="btn">
+              <img src="./img/icons/sort.svg" />
+            </button>
           </div>
         </form>
       </section>
@@ -78,35 +76,61 @@
             <ul>
               <li class="price">
                 Price
-                <!-- <form class="form_item" action="">
-
-                            </form> -->
+                
+                  <label for="from">From</label>
+                  <input class="inp" id="from" type="text" placeholder="text" value="0"></input>
+                  <label for="To">To</label>
+                  <input class="inp" id="to" type="text" placeholder="text" value="35000"></input>
+                
               </li>
               <li class="color">
                 Color
-                <!-- <form class="form_item" action="">
-
-                            </form> -->
+               
+                <label class="red"><input id="checkbox" type="checkbox">Red</input></label>
+                <label class="black"><input id="checkbox" type="checkbox">Black</input></label>
+                <label class="blue"><input id="checkbox" type="checkbox">Blue</input></label>
+                <label class="gold"><input id="checkbox" type="checkbox">Gold</input></label>
+                <label class="green"><input id="checkbox" type="checkbox">Green</input></label>
+                <label class="white"><input id="checkbox" type="checkbox">White</input></label>
+                <label class="grey"><input id="checkbox" type="checkbox">Grey</input></label>
+                <label class="yellow"><input id="checkbox" type="checkbox">Yellow</input></label>
+                
               </li>
               <li class="memory">
                 Memory
-                <!-- <form class="form_item" action="">
-
-                            </form> -->
+                
+                <label class="red"><input id="checkbox" type="checkbox">32 Gb</input></label>
+                <label class="black"><input id="checkbox" type="checkbox">64 Gb</input></label>
+                <label class="blue"><input id="checkbox" type="checkbox">128 Gb</input></label>
+                <label class="gold"><input id="checkbox" type="checkbox">256 Gb</input></label>
+                <label class="green"><input id="checkbox" type="checkbox">512 Gb</input></label>
+                <label class="white"><input id="checkbox" type="checkbox">1 TB</input></label>
+                <label class="grey"><input id="checkbox" type="checkbox">2 TB</input></label>
+                <label class="yellow"><input id="checkbox" type="checkbox">4 TB</input></label>
+                
               </li>
               <li class="os">
                 OS
-                <!-- <form class="form_item" action="">
-
-                            </form> -->
+                
+                <label class="ios"><input id="checkbox" type="checkbox">IOS</input></label>
+                <label class="mac-os"><input id="checkbox" type="checkbox">Mac OS</input></label>
+                <label class="tv-os"><input id="checkbox" type="checkbox">tvOS</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">Watch  OS</input></label>
+                
               </li>
               <li class="display">
                 Display
-                <!-- <form class="form_item" action="">
-
-                            </form> -->
+                
+                <label class="ios"><input id="checkbox" type="checkbox">2 - 5 inch</input></label>
+                <label class="mac-os"><input id="checkbox" type="checkbox">5 - 7 inch</input></label>
+                <label class="tv-os"><input id="checkbox" type="checkbox">7 - 12 inch</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">12 - 16 inch</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">+16 inch</input></label>
+                
               </li>
             </ul>
+            <button class="clear-form">Clear form</button>
+            <button class="apply-filters">Apply</button>
           </nav>
         </aside>
         <main class="wrapper__content">
