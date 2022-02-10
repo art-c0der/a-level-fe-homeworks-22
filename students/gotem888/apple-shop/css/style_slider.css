@@ -1,0 +1,137 @@
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+.slider__items {
+  display: flex;
+  transition: transform 3s ease;
+}
+.transition-none {
+  transition: none;
+}
+.slider__item {
+  display: inline-block;
+  height: 512px;
+  width: 1024px;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+.slider__control {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background: url("https://i.ibb.co/ngCzdZ8/layer.png") no-repeat;
+  opacity: 0.5;
+  user-select: none;
+}
+.slider__control_show {
+  display: flex;
+}
+.slider__control:focus,
+.slider__control:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: 1;
+}
+.slider__control_prev {
+  left: 0;
+}
+.slider__control_next {
+  right: 0;
+}
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 32px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+.slider__control_prev::before {
+  background-image: url("https://i.ibb.co/hm7MpJK/leftarrow.png");
+}
+.slider__control_next::before {
+  background-image: url("https://i.ibb.co/q9qGtrH/rightarrow.png");
+}
+.slider__indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+  user-select: none;
+}
+.slider__indicator {
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+}
+.slider__indicator_active {
+  background-color: #fff;
+}
+
+p.pods {
+  left: calc(50% - 380px / 2);
+}
+p.tv {
+  color: #000;
+  left: 5%;
+  top: 23%;
+}
+p.mac {
+  left: calc(50% - 512px / 2);
+  top: 30%;
+}
+p.watch {
+  left: 5%;
+  top: 35%;
+}
+p.podsMax {
+  color: #000;
+  top: 0;
+  left: 30%;
+}
+
+a.app_tv {
+  bottom: 48%;
+  left: 12%;
+}
+a.macbook {
+  bottom: 37%;
+}
+a.app_watch {
+  left: 22%;
+}
+a.max {
+  bottom: 5%;
+}
+a.button:hover {
+  background: #0e49b5;
+  color: #ffffff;
+  transition: 0.2s;
+  box-shadow: 0 0 4px 0 #102243 inset, 0 0 4px 1px #102243;
+}
+a.button:active {
+  box-shadow: 0 0 30px 30px #102243 inset;
+  color: #ffffff;
+  transition: 0.3s;
+}
