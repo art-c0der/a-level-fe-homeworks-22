@@ -41,6 +41,27 @@ boby {
   box-shadow: 5px 5px 5px 0 rgba(170, 170, 170, 0.6);
   border-radius: 2px;
   width: 710px;
+  padding-left: 40px;
+  padding-right: 70px;
+}
+
+.search_icon {
+  position: absolute;
+  left: 6px;
+  top: 10px;
+}
+
+.two_icons {
+  position: absolute;
+    right: 6px;
+    top: 3px;
+}
+.ic_filter{
+  width: 35px;
+}
+
+.ic_sort {
+  width: 30px;
 }
 
 .main {
@@ -58,21 +79,22 @@ boby {
 }
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 54, 54);
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
-  border: none;
-  outline: none;
+  border-left: 1px;
+  border-right: 1px;
+  /* outline: none; */
   transition: 0.4s;
   font-size: 18px;
   height: 50px;
 }
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: rgb(255, 255, 255);
 }
 
 .panel {
@@ -91,41 +113,62 @@ boby {
 
 label {
   position: relative;
-  padding: 50px;
+  /* padding: 50px; */
   cursor: pointer;
 }
 
-.checkbox {
-
+.from {
+  padding-right: 20px;
 }
 
+.to {
+  padding-right: 37px;
+  
+}
+
+.color .checkbox, .memory .checkbox {
+  width: 50%;
+}
+.OS .checkbox, .display .checkbox {
+  width: 100%;
+}
+.checkbox {
+  display: inline-block;
+  float: left;
+}
+
+.color, .memory, .OS, .display, .checkbox label {
+  padding-left: 10px;
+}
+
+
 .content {
-  background-color: tomato;
+  /* background-color: tomato; */
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
   height: 100vh;
-  gap: 20px;
 }
 
 .card {
-  display: flex;
+  /* display: flex; */
   position: relative;
-  height: 200px;
-  width: 150px;
+  height: 480px;
+  width: 300px;
   border: 1px #eee solid;
   border-radius: 3px;
   box-shadow: 0px 0px 8px 0px rgba(149, 58, 58);
   cursor: pointer;
   overflow: hidden;
+  text-align: center;
 }
 
 .card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  /* object-fit: cover; */
   border-radius: 3px;
 }
 

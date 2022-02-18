@@ -20,8 +20,13 @@
         </div>
         <div class="search__field">
             <input class="search" type="search" inputmode="search" placeholder="Enter device name">
-            <img src="./Basic/Filter.svg" class="icons">
-            <img src="./Basic/Sort.svg" class="icons">
+            <div class="search_icon">
+                <img src="./Basic/search 1.png" class="icons ic_search">
+            </div>
+            <div class="two_icons">
+                <img src="./Basic/Filter.svg" class="icons ic_filter">
+                <img src="./Basic/Sort.svg" class="icons ic_sort">
+            </div>
         </div>
     </div>
     <div class="main">
@@ -30,81 +35,132 @@
                 <button class="accordion">Price</button>
                 <div class="panel">
                     <div class="form__item">
-                        <label for="name">From</label> 
+                        <label class="from" for="name">From</label> 
                         <input type="text" name="name" id="name" placeholder="From...">
                     </div>
                     <div class="form__item">
-                        <label for="name">To</label> 
+                        <label class="to" for="name">To</label> 
                         <input type="text" name="name" id="name" placeholder="To...">
                     </div>
+                    <button type="submit" class="form__item">Apply</button>
                 </div>
-                <button type="submit" class="form__item">Apply</button>
+                
             </form>
 
             <button class="accordion">Color</button>
-            <div class="panel">
-                <input type="checkbox"/>
+            <div class="panel color">
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Red</label>
-                <input type="checkbox"/>
+                </div>    
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Green</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Black</label>
+                </div>
+                <div class="checkbox">
                 <input type="checkbox"/>
                     <label>White</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Blue</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Grey</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Gold</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Yellow</label>
+                </div>
             </div>
 
             <button class="accordion">Memory</button>
-            <div class="panel">
-                <input type="checkbox"/>
+            <div class="panel memory">
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>32 Gb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>64 Gb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>128 Gb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>256 Gb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>512 Gb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>1 Tb</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>2 Tb</label>
-                <input type="checkbox"/>
-                    <label>4 Tb</label>        
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label>4 Tb</label>
+                </div>        
             </div>
 
             <button class="accordion">OS</button>
-            <div class="panel">
-                <input type="checkbox"/>
+            <div class="panel OS">
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>iOS</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>Mac OS</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>tvOS</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>watch OS</label>
+                </div>
             </div>
 
             <button class="accordion">Display</button>
-            <div class="panel">
-                <input type="checkbox"/>
+            <div class="panel display">
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>2 - 5 inch</label>
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>5 - 7 inch</label>
-                <input type="checkbox"/>
-                    <label>7 - 12 inch</label>  
-                <input type="checkbox"/>
-                    <label>12 - 16 inch</label>  
-                <input type="checkbox"/>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label>7 - 12 inch</label>
+                </div>  
+                <div class="checkbox">
+                    <input type="checkbox"/>
+                    <label>12 - 16 inch</label>
+                </div>  
+                <div class="checkbox">
+                    <input type="checkbox"/>
                     <label>+16 inch</label>
+                </div>
             </div>
         </div>
         <div id="content" class="content"></div>
