@@ -1,4 +1,4 @@
-boby {
+body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   min-height: 100vh;
@@ -53,10 +53,10 @@ boby {
 
 .two_icons {
   position: absolute;
-    right: 6px;
-    top: 3px;
+  right: 6px;
+  top: 3px;
 }
-.ic_filter{
+.ic_filter {
   width: 35px;
 }
 
@@ -123,13 +123,14 @@ label {
 
 .to {
   padding-right: 37px;
-  
 }
 
-.color .checkbox, .memory .checkbox {
+.color .checkbox,
+.memory .checkbox {
   width: 50%;
 }
-.OS .checkbox, .display .checkbox {
+.OS .checkbox,
+.display .checkbox {
   width: 100%;
 }
 .checkbox {
@@ -137,10 +138,13 @@ label {
   float: left;
 }
 
-.color, .memory, .OS, .display, .checkbox label {
+.color,
+.memory,
+.OS,
+.display,
+.checkbox label {
   padding-left: 10px;
 }
-
 
 .content {
   /* background-color: tomato; */
@@ -190,6 +194,3 @@ label {
 .card:hover .card__title {
   height: 100%;
 }
-
-
-
