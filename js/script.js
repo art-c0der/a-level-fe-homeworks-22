@@ -524,7 +524,7 @@ const items = [
             depth: '0.6', // cm
             weight: '1.07', // Кг
         },
-        os: 'macOS',
+        os: 'watchOS',
         InTheBox: ['Case', 'Solo Loop', '1m Magnetic Charging Cable'],
         orderInfo: {
           inStock: 90, // кол-во едениц товара в наличии
@@ -562,7 +562,7 @@ const items = [
             depth: '0.6', // cm
             weight: '1.07', // Кг
         },
-        os: 'macOS',
+        os: 'watchOS',
         InTheBox: ['Case', 'Band (can be configured for either S/M or M/L length)', '1m Magnetic Charging Cable'],
         orderInfo: {
           inStock: 79, // кол-во едениц товара в наличии
@@ -600,7 +600,7 @@ const items = [
             depth: '0.6', // cm
             weight: '1.07', // Кг
         },
-        os: 'macOS',
+        os: 'watchOS',
         InTheBox: ['Case', 'Band (can be configured for either S/M or M/L length)', '1m Magnetic Charging Cable'],
         orderInfo: {
           inStock: 47, // кол-во едениц товара в наличии
@@ -1310,9 +1310,43 @@ const createCardContent = (object) => {
   }
   return card;
 };
+let arrows = document.querySelectorAll('.arrow');
+const filterContent = document.querySelectorAll('.filterWrapper');
+const sideFitersButton = document.getElementById("sideFitersButton");
+const sideFiters = document.getElementById("sideFiters");
+const content = document.querySelector('#items');
+const filterModal = document.getElementById("filterModal")
 
+let filteredArray=[];
+filterContent.forEach((element)=>{filteredArray.push(element.classList[0])})
+sideFitersButton.addEventListener("click",()=>{
+    if(sideFiters.classList.contains("displayNone")){
+        sideFiters.classList.remove("displayNone");
+        content.classList.add('itemsWrapperFiltered')
+        filterModal.classList.remove("displayNone")
+    }
+    else{sideFiters.classList.add("displayNone");
+    content.classList.remove('itemsWrapperFiltered')
+    filterModal.classList.add("displayNone")
+}
+})
+
+arrows.forEach((el)=>{
+    el.addEventListener("click",()=>
+    { 
+       if(el.classList.contains("down")){
+       el.classList.add("up")
+       el.classList.remove("down")
+       filterContent[filteredArray.indexOf(el.classList[0])].classList.add("displayNone")
+       }
+       else{
+       el.classList.remove("up")
+       el.classList.add("down")   
+        filterContent[filteredArray.indexOf(el.classList[0])].classList.remove("displayNone")
+       }
+    });
+});
 const generateContent = (array) => {
-  const content = document.querySelector('#items');
 
   content.innerHTML = '';
 
@@ -1329,32 +1363,147 @@ const generateContent = (array) => {
 generateContent(items);
 
 const filterData = (data, filter) => {
-  const {device} = filter;
   const filteredData1 = data.filter((item) => {
     let result = false;
 
-    if (device) {
-      if (item.name.toLowerCase().includes(device.toLowerCase())) {
+    if (filter) {
+      if (item.name.toLowerCase().includes(filter.toLowerCase())) {
         result = true;
       }
     }
     return result;
   });
-  if(device.length===0){
+  if(filter.length===0){
     return items;
   }
   else if(filteredData1!==0){
     return filteredData1;
   }
 };
+const filterDataByPrice = (data)=>{
+    let minPrice = Number(document.getElementById("startingPrice").value);
+    let maxPrice = Number(document.getElementById("endingPrice").value);
+    let filteredData =[];
+    if (minPrice!==0&&maxPrice!==0) {filteredData = data.filter(e=> maxPrice>e.price&& e.price>minPrice)}
+     else if(minPrice!==0){filteredData = data.filter(e=>e.price>minPrice)}
+     else if(maxPrice!==0){filteredData = data.filter(e=>maxPrice> e.price)}
+     else{
+        filteredData = data;
+     }
+     return filteredData;
+}
 
-document.forms.searchBar.addEventListener('submit', (e) => {
-  e.preventDefault();
+const colors = document.getElementsByName("color");
+const filterDataByColors =(data)=>{
+    let checked = [];
+    colors.forEach((e)=>{
+        if(e.checked){
+            checked.push(e);
+    }})
+    if(checked.length>=1){
+        let checkedColors = []
+        checked.forEach((e)=>checkedColors.push(e.value))
 
-  const formData = new FormData(e.target);
-  const formProps = Object.fromEntries(formData);
+        let filteredData=[]
+        data.forEach((item) => {
+            checkedColors.forEach((e)=>{if(item.color.join().includes(e)){
+            filteredData.push(item);
+            }})
+       });
+    return filteredData;
 
-  const filteredData = filterData(items, formProps);
+}
+else{
+    return data;
+}}
+const memory = document.getElementsByName("memory");
+const filterDataByMemory =(data)=>{
+    let checked = [];
+    memory.forEach((e)=>{
+        if(e.checked){
+            checked.push(e);
+    }})
+    if(checked.length>=1){
+        let checkedMemory = []
+        checked.forEach((e)=>checkedMemory.push(e.value))
+
+        let filteredData=[]
+        checkedMemory.forEach((e) => {
+            data.forEach((item)=>{if(item.storage==e){
+            filteredData.push(item);
+            }})
+       });
+    return filteredData;
+
+}
+else{
+    return data;
+}}
+const os = document.getElementsByName("OS");
+const filterDataByOS =(data)=>{
+    let checked = [];
+    os.forEach((e)=>{
+        if(e.checked){
+            checked.push(e);
+    }})
+    if(checked.length>=1){
+        let checkedOS = []
+        checked.forEach((e)=>checkedOS.push(e.value))
+
+        let filteredData=[]
+        checkedOS.forEach((e) => {
+            data.forEach((item)=>{if(item.os==e){
+            filteredData.push(item);
+            }})
+       });
+    return filteredData;
+
+}
+else{
+    return data;
+}}
+const compareNumbers = (a, b) => {
+  return a - b;
+}
+
+const display = document.getElementsByName("display");
+const filterDataByDisplay = (data)=>{
+        let checked = [];
+        display.forEach((e)=>{
+        if(e.checked){
+            checked.push(e);
+    }})
+    if(checked.length>=1){
+        let arrayOfInches = []
+        let filteredData=[]
+        checked.forEach((e)=>{arrayOfInches.push(e.min); arrayOfInches.push(e.max)})
+        arrayOfInches = arrayOfInches.sort(compareNumbers);
+        data.forEach((item)=>{if(arrayOfInches[0] <= item.display && arrayOfInches[arrayOfInches.length-1] >= item.display ){
+            filteredData.push(item);
+        }});
+    return filteredData;
+        }
+    else{return data}
+}
+const searchBar = document.getElementById("searchBar")
+let inputs = searchBar.getElementsByTagName("input")
+for (let input of inputs) {
+    const eventType = input.type === 'checkbox' ? 'change' : 'input';;
+
+    input.addEventListener(eventType, (e) => {
+   e.preventDefault();
+    let filteredData = items;
+   if(input.id==='searchedDevice'){
+      const data = input.value;
+      console.log(input.value)
+      filteredData = filterData(items, data);
+  }
+  filteredData = filterDataByColors(filteredData)
+  filteredData = filterDataByPrice(filteredData);
+  filteredData = filterDataByMemory(filteredData);
+  filteredData = filterDataByOS(filteredData);
+  filteredData = filterDataByDisplay(filteredData);
   generateContent(filteredData);
-});
+    });
+  };
 
