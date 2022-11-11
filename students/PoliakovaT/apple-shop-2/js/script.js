@@ -1,5 +1,4 @@
 import ITEMS from "./items.js";
-import ITEMS from "./filters.js";
 
 const createCardContent = (object) => {
   const { name, imgUrl, price, orderInfo } = object;

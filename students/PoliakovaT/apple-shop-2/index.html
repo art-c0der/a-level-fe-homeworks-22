@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MacOutlet</title>
+  </head>
+  
+  <body class="wrapper">
+    <div class="popup">
+
+    </div>
+    <header class="header">
+      <div class="logo">
+        <img src="./img/logo.png" width="120" height="25"  />
+      </div>
+      <button class="btn cart">
+        <img src="./img/icons/cart-empty.svg" width="40" height="40"  />
+        <img
+          class="cart-count"
+          src="./img/icons/cart-count.svg"
+          width="25"
+          height="25"
+          
+        />
+      </button>
+    </header>
+    <img
+      src="./img/banners/airpods_pro_banner.png"
+      width="1024"
+      height="auto"
+      
+    />
+
+    <div class="main">
+      <section class="search">
+        <form name="filtersForm" class="search__form form">
+          <input
+            class="form__input"
+            type="search"
+            name="name"
+            id="name"
+            placeholder="Enter device name..."
+          />
+          <img
+            class="form__glass"
+            src="./img/icons/search.svg"
+            width="25"
+            height="25"
+          />
+          <div class="form__buttons">
+            <button id="filter__btn" class="btn">
+              <img src="./img/icons/filter2.svg" />
+            </button>
+            <button id="setting__btn" class="btn">
+              <img src="./img/icons/sort.svg" />
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="wrappercnt">
+        <aside class="wrapper__filters">
+          <nav>
+            <ul>
+              <li class="price">
+                Price
+                
+                  <label for="from">From</label>
+                  <input class="inp" id="from" type="text" placeholder="text" value="0"></input>
+                  <label for="To">To</label>
+                  <input class="inp" id="to" type="text" placeholder="text" value="35000"></input>
+                
+              </li>
+              <li class="color">
+                Color
+               
+                <label class="red"><input id="checkbox" type="checkbox">Red</input></label>
+                <label class="black"><input id="checkbox" type="checkbox">Black</input></label>
+                <label class="blue"><input id="checkbox" type="checkbox">Blue</input></label>
+                <label class="gold"><input id="checkbox" type="checkbox">Gold</input></label>
+                <label class="green"><input id="checkbox" type="checkbox">Green</input></label>
+                <label class="white"><input id="checkbox" type="checkbox">White</input></label>
+                <label class="grey"><input id="checkbox" type="checkbox">Grey</input></label>
+                <label class="yellow"><input id="checkbox" type="checkbox">Yellow</input></label>
+                
+              </li>
+              <li class="memory">
+                Memory
+                
+                <label class="red"><input id="checkbox" type="checkbox">32 Gb</input></label>
+                <label class="black"><input id="checkbox" type="checkbox">64 Gb</input></label>
+                <label class="blue"><input id="checkbox" type="checkbox">128 Gb</input></label>
+                <label class="gold"><input id="checkbox" type="checkbox">256 Gb</input></label>
+                <label class="green"><input id="checkbox" type="checkbox">512 Gb</input></label>
+                <label class="white"><input id="checkbox" type="checkbox">1 TB</input></label>
+                <label class="grey"><input id="checkbox" type="checkbox">2 TB</input></label>
+                <label class="yellow"><input id="checkbox" type="checkbox">4 TB</input></label>
+                
+              </li>
+              <li class="os">
+                OS
+                
+                <label class="ios"><input id="checkbox" type="checkbox">IOS</input></label>
+                <label class="mac-os"><input id="checkbox" type="checkbox">Mac OS</input></label>
+                <label class="tv-os"><input id="checkbox" type="checkbox">tvOS</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">Watch  OS</input></label>
+                
+              </li>
+              <li class="display">
+                Display
+                
+                <label class="ios"><input id="checkbox" type="checkbox">2 - 5 inch</input></label>
+                <label class="mac-os"><input id="checkbox" type="checkbox">5 - 7 inch</input></label>
+                <label class="tv-os"><input id="checkbox" type="checkbox">7 - 12 inch</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">12 - 16 inch</input></label>
+                <label class="watch-os"><input id="checkbox" type="checkbox">+16 inch</input></label>
+                
+              </li>
+            </ul>
+            <button class="clear-form">Clear form</button>
+            <button class="apply-filters">Apply</button>
+          </nav>
+        </aside>
+        <main class="wrapper__content">
+          <p id="loading" class="content__loader">Loading...</p>
+          <ul id="content" class="content">
+            <div class="card"></div>
+          </ul>
+        </main>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="">
+        <p>Footer</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
